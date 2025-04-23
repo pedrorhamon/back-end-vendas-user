@@ -3,6 +3,7 @@ package com.starking.user_vendas.config;
 import java.io.IOException;
 import java.util.Map;
 
+import com.starking.user_vendas.services.JwtService;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
