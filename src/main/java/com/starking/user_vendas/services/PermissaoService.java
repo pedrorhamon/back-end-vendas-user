@@ -4,6 +4,7 @@ import com.starking.user_vendas.model.Permissao;
 import com.starking.user_vendas.model.SubPermissao;
 import com.starking.user_vendas.model.dtos.request.PermissaoRequest;
 import com.starking.user_vendas.model.dtos.response.PermissaoResponse;
+import com.starking.user_vendas.repositories.PermissaoRepository;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
