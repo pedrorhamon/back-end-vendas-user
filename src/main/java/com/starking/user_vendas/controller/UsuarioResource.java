@@ -9,7 +9,6 @@ import com.starking.user_vendas.model.dtos.response.TokenResponse;
 import com.starking.user_vendas.model.dtos.response.UsuarioResponse;
 import com.starking.user_vendas.services.JwtService;
 import com.starking.user_vendas.services.UsuarioService;
-import com.starking.vendas.resource.apis_base.ApiUsuarioBaseControle;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;

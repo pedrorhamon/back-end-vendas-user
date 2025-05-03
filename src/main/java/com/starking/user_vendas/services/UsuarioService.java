@@ -8,6 +8,7 @@ import com.starking.user_vendas.model.dtos.request.PermissaoRequest;
 import com.starking.user_vendas.model.dtos.request.UsuarioRequest;
 import com.starking.user_vendas.model.dtos.response.UsuarioResponse;
 import com.starking.user_vendas.repositories.UsuarioRepository;
+import jakarta.mail.MessagingException;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import jakarta.validation.ValidationException;
@@ -98,7 +99,7 @@ public class UsuarioService {
         // Envie o email de boas-vindas
         try {
             emailService.sendWelcomeEmail(usuarioRequest.getEmail(), usuarioRequest.getName());
-        } catch (RuntimeException e) {
+        } catch (MessagingException e) {
             e.printStackTrace(); // Trate o erro apropriadamente na produção
         }
 
@@ -202,7 +203,7 @@ public class UsuarioService {
 	        usuario.setSenha(senhaHash);
 	        usuarioRepository.save(usuario);
 			emailService.sendPasswordEmail(usuario.getEmail(), usuario.getName(), novaSenha);
-		} catch (RuntimeException e) {
+		} catch (MessagingException e) {
 			e.printStackTrace(); // Trate o erro apropriadamente
 			throw new RuntimeException(VERIFICACAO_SENHA);
 		}

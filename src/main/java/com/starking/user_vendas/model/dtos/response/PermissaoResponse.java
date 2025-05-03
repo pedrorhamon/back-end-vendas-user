@@ -1,7 +1,6 @@
 package com.starking.user_vendas.model.dtos.response;
 
 import com.starking.user_vendas.model.Permissao;
-import com.starking.vendas.model.Permissao;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
