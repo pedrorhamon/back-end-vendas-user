@@ -22,9 +22,9 @@ public class SwaggerConfig {
 	@Bean
 	public OpenAPI customOpenAPI() {
 		return new OpenAPI()
-				.info(new Info().title("API Vendas")
+				.info(new Info().title("API Vendas Controle de Usuários")
 						.version("1.0")
-				.description("API documentation for the application in Vendas in Geolocation")
+				.description("API documentation for the application in API Sales Controllers de Usuários")
 				.termsOfService("http://swagger.io/terms/")
 				.license(new License().name("Directly").url("https://github.com/pedrorhamon")))
 				.addSecurityItem(new SecurityRequirement().addList("JWT"))

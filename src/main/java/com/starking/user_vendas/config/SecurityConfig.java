@@ -33,8 +33,7 @@ public class SecurityConfig {
     private final JwtService jwtService;
 
 
-    private static final String[] AUTH = {  "/api/pessoas/**",
-            "/api/categorias/**", "/api/lancamentos/**",
+    private static final String[] AUTH = {
             "/api/usuarios/**", "/api/permissoes/**", "/api/sub-permissoes/**", "/v3/api-docs/**",
             "/swagger-ui/**", "/swagger-ui.html","/swagger-resources/**", "/webjars/**"};
     @Bean
