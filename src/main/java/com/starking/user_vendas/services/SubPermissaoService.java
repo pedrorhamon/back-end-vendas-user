@@ -1,11 +1,11 @@
 package com.starking.user_vendas.services;
 
-import com.starking.vendas.model.Permissao;
-import com.starking.vendas.model.SubPermissao;
-import com.starking.vendas.model.request.SubPermissaoRequest;
-import com.starking.vendas.model.response.SubPermissaoResponse;
-import com.starking.vendas.repositories.PermissaoRepository;
-import com.starking.vendas.repositories.SubPermissaoRepository;
+import com.starking.user_vendas.model.Permissao;
+import com.starking.user_vendas.model.SubPermissao;
+import com.starking.user_vendas.model.dtos.request.SubPermissaoRequest;
+import com.starking.user_vendas.model.dtos.response.SubPermissaoResponse;
+import com.starking.user_vendas.repositories.PermissaoRepository;
+import com.starking.user_vendas.repositories.SubPermissaoRepository;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
