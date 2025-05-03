@@ -1,5 +1,7 @@
 package com.starking.user_vendas.controller;
 
+import com.starking.user_vendas.controller.api_base.ApiUsuarioBaseControle;
+import com.starking.user_vendas.event.RecursoCriadoEvent;
 import com.starking.user_vendas.model.dtos.request.AlterarSenhaRequest;
 import com.starking.user_vendas.model.dtos.request.CredenciaisRequest;
 import com.starking.user_vendas.model.dtos.request.UsuarioRequest;
@@ -7,17 +9,7 @@ import com.starking.user_vendas.model.dtos.response.TokenResponse;
 import com.starking.user_vendas.model.dtos.response.UsuarioResponse;
 import com.starking.user_vendas.services.JwtService;
 import com.starking.user_vendas.services.UsuarioService;
-import com.starking.vendas.event.RecursoCriadoEvent;
-import com.starking.vendas.model.DocumentoAssinado;
-import com.starking.vendas.model.request.AlterarSenhaRequest;
-import com.starking.vendas.model.request.CredenciaisRequest;
-import com.starking.vendas.model.request.UsuarioRequest;
-import com.starking.vendas.model.response.TokenResponse;
-import com.starking.vendas.model.response.UsuarioResponse;
 import com.starking.vendas.resource.apis_base.ApiUsuarioBaseControle;
-import com.starking.vendas.services.DocumentoAssinadoService;
-import com.starking.vendas.services.JwtService;
-import com.starking.vendas.services.UsuarioService;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
@@ -30,23 +22,20 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-
-import java.util.Optional;
 
 /**
  * @author pedroRhamon
  */
 @RestController
 @AllArgsConstructor
-public class UsuarioResource extends ApiUsuarioBaseControle{
+public class UsuarioResource extends ApiUsuarioBaseControle {
 	
 	private final UsuarioService usuarioService;
 	
 	private final JwtService jwtService;
 	
 	private final ApplicationEventPublisher publisher;
-	private final DocumentoAssinadoService documentoAssinadoService;
+//	private final DocumentoAssinadoService documentoAssinadoService;
 
 	@PostMapping("/autenticar")
 	public ResponseEntity<?> autenticar( @RequestBody @Valid CredenciaisRequest request ) {
