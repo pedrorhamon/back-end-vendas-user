@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import com.starking.user_vendas.services.JwtService;
+import com.starking.user_vendas.services.SecurityUserDetailsService;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -15,9 +16,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.filter.OncePerRequestFilter;
-
-import com.starking.vendas.services.JwtService;
-import com.starking.vendas.services.SecurityUserDetailsService;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

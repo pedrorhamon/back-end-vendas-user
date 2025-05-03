@@ -9,10 +9,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
+import com.starking.user_vendas.config.component.JwtProperties;
+import com.starking.user_vendas.model.dtos.response.UsuarioResponse;
 import org.springframework.stereotype.Service;
-
-import com.starking.vendas.config.component.JwtProperties;
-import com.starking.vendas.model.response.UsuarioResponse;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
