@@ -1,13 +1,10 @@
 package com.starking.user_vendas.controller;
 
 import com.starking.user_vendas.controller.api_base.ApiSubPermissaoBaseControle;
+import com.starking.user_vendas.event.RecursoCriadoEvent;
+import com.starking.user_vendas.model.dtos.request.SubPermissaoRequest;
 import com.starking.user_vendas.model.dtos.response.SubPermissaoResponse;
 import com.starking.user_vendas.services.SubPermissaoService;
-import com.starking.vendas.event.RecursoCriadoEvent;
-import com.starking.vendas.model.request.SubPermissaoRequest;
-import com.starking.vendas.model.response.SubPermissaoResponse;
-import com.starking.vendas.resource.apis_base.ApiSubPermissaoBaseControle;
-import com.starking.vendas.services.SubPermissaoService;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import jakarta.validation.ValidationException;
