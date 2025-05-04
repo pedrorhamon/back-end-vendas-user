@@ -40,7 +40,6 @@ public class SwaggerConfig {
 	            .in(SecurityScheme.In.HEADER)
 	            .name("Authorization");
 	}
-
 	@Bean
 	public GroupedOpenApi publicApi() {
 		return GroupedOpenApi.builder()
