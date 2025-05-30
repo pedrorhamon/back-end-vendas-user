@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  vendas-db:
+    image: postgis/postgis:16-3.4  # Usando PostgreSQL 16 com PostGIS 3.4
+    container_name: user_vendas
+    environment:
+      POSTGRES_DB: vendas-user-db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      PGDATA: /data/postgres
+    ports:
+      - "5435:5432"  # Mapeia a porta 5432 do host para a porta 5432 do contêiner
+    volumes:
+      - vendas-data:/data/postgres
+
+  vendas-service:
+    build: './'
+    container_name: vendas-user-service
+    depends_on:
+      - vendas-user-db
+    environment:
+      DB_HOST: vendas-user-db
+      DB_PORT: 5435
+      DB_NAME: user-vendas
+      DB_USER: postgres
+      DB_PASSWORD: root
+    ports:
+      - "8080:8080"
+    networks:
+      - default
+
+volumes:
+  vendas-data:
+    driver: local
+
+networks:
+  default:
+    driver: bridge
